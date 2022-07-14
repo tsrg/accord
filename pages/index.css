@@ -7,6 +7,7 @@
   --sign-content-background-color: blueviolet;
   --main-title-color: #fff;
   --form-input-outline-color: aquamarine;
+  --main-transition: all .6s ease-in-out;;
 }
 
 .page {
@@ -59,7 +60,7 @@
   font-size: 18px;
   border-radius: 10px;
   border: none;
-  transition: all .6s ease-in-out;
+  transition: var(--main-transition);
 }
 
 .sign-form__btn:hover {
@@ -77,7 +78,11 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+}
+
+.form__input-container {
+  position: relative;
 }
 
 .form__input {
@@ -85,12 +90,41 @@
   border-radius: 10px;
   border: none;
   padding: 12px;
-  transition: all .6s ease-in-out;
+  width: calc(100% - 24px);
+  transition: var(--main-transition);
 }
 
 .form__input:focus {
   outline: none;
   box-shadow: 0 0 10px 3px var(--form-input-outline-color);
+}
+
+.form__eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(/img/eye-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 14px;
+  right: 14px;
+  opacity: 0.4;
+  transition: var(--main-transition);
+}
+
+.form__eye:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.form__validation-error {
+  display: block;
+  padding-left: 14px;
+  padding-top: 6px;
+  color: #f09292;
+  position: absolute;
+  bottom: -22px;
 }
 
 .form__btn {
@@ -101,7 +135,7 @@
   font-size: 18px;
   border-radius: 10px;
   border: none;
-  transition: all .6s ease-in-out;
+  transition: var(--main-transition);
 }
 
 .form__btn:hover {
@@ -120,8 +154,4 @@
 .form__link:hover {
   text-decoration: underline;
   transform: scale(1.01);
-}
-
-.form__eye {
-  position: absolute;
 }

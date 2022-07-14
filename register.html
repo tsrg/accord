@@ -15,12 +15,24 @@
         <!-- Start of /registration/login.html -->
           <h1 class="sign-form__title">Sign up</h1>
           <form class="form">
-            <input class="form__input" type="text" placeholder="Login">
-            <input class="form__input" type="email" placeholder="E-mail">
-            <input class="form__input" type="password" placeholder="Password">
-            <div class="form__eye"></div>
-            <input class="form__input" type="password" placeholder="Confim password">
-            <div class="form__eye"></div>
+            <div class="form__input-container">
+              <input class="form__input" type="text" placeholder="Login">
+              <span class="form__validation-error">Login is too short</span>
+            </div>
+            <div class="form__input-container">
+              <input class="form__input" type="email" placeholder="E-mail">
+              <span class="form__validation-error"></span>
+            </div>
+            <div class="form__input-container">
+              <input class="form__input" type="password" placeholder="Password">
+              <div class="form__eye"></div>
+              <span class="form__validation-error"></span>
+            </div>
+            <div class="form__input-container">
+              <input class="form__input" type="password" placeholder="Confim password">
+              <div class="form__eye"></div>
+              <span class="form__validation-error"></span>
+            </div>
             <input class="form__btn" type="submit" value="Sign up">
           </form>
           <a href="/signin.html" class="form__link">Sign in</a>
